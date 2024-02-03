@@ -3,8 +3,8 @@
 
 class HW_API
 {
-    void forward();
-    void backward();
+    static void forward();
+    static void backward();
 };
 
 #endif // !_HARDWARE_INTERFACE_
