@@ -23,7 +23,7 @@ public:
     template <Veh_Version VERSION>
     static int DELTA; // left speed will minus this value
 
-    CS int SPEED = 75; // car speed
+    CS int SPEED = 100; // car speed
     
     static bool left_on_line;
     static bool right_on_line;
