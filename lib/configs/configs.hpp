@@ -23,7 +23,7 @@ public:
     CS int QTR_SENSOR_B = A0;         // qtr sensor
     CS int DELTA = 0;
 
-    CS int speed = 100; // car speed
+    CS int SPEED = 100; // car speed
     
 
     static void init()
