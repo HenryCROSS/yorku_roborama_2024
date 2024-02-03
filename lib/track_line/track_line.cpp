@@ -27,4 +27,7 @@ void Track_Line::run()
         
     }
     // delayMicroseconds(1);
+    delay(100);
+    HW_API::emerg_stop();
+    delay(100);
 }

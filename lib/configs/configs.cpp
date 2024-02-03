@@ -8,7 +8,7 @@ int G::DELTA<Veh_Version::MK_1> = 10;
 template<>
 int G::SPEED<Veh_Version::MK_1> = 120;
 template<>
-int G::TURN_SPEED<Veh_Version::MK_1> = 50;
+int G::TURN_SPEED<Veh_Version::MK_1> = 75;
 
 
 template<>
