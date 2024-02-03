@@ -21,6 +21,7 @@ public:
     CS int QTR_SENSOR_FL = A2;        // qtr sensor
     CS int QTR_SENSOR_FR = A1;        // qtr sensor
     CS int QTR_SENSOR_B = A0;         // qtr sensor
+    CS int DELTA = 0;
 
     static void init()
     {
