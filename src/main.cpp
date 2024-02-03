@@ -1,9 +1,4 @@
-#include <Arduino.h>
-
-#include<debug.hpp>
-#include <configs.hpp>
-#include <hardware_interface.hpp>
-#include <track_line.hpp>
+#include <common.hpp>
 
 void setup() {
   // put your setup code here, to run once:
