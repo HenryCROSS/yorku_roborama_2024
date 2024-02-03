@@ -93,6 +93,16 @@ void HW_API::backward()
     car_go_backward(G::SPEED);
 }
 
+void HW_API::backward()
+{
+    car_go_backward(G::SPEED);
+}
+
+void HW_API::emerg_stop()
+{
+    car_go_backward(0);
+}
+
 void HW_API::read_data()
 {
     G::left_on_line = digitalRead(G::SENSOR_L);

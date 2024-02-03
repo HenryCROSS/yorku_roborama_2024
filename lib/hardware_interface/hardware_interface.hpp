@@ -9,6 +9,7 @@ class HW_API
     static void forward();    //
     static void backward();   //
     static void read_data();  //
+    static void emerg_stop();
 };
 
 #endif // !_HARDWARE_INTERFACE_
