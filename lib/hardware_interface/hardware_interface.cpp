@@ -74,11 +74,11 @@ void car_turn_left_by_speed(int left_wheel_backward_speed, int right_wheel_forwa
 }
 
 void HW_API::turn_left(){
-    car_go_forward_by_speed(0, G::SPEED);
+    car_go_forward_by_speed(G::SPEED, G::SPEED);
 }
 
 void HW_API::turn_right(){
-    car_go_forward_by_speed(G::SPEED, 0);
+    car_go_forward_by_speed(G::SPEED, G::SPEED);
 }
 
 
