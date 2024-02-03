@@ -1,5 +1,6 @@
 #include <Arduino.h>
 
+#include<debug.hpp>
 #include <configs.hpp>
 #include <hardware_interface.hpp>
 #include <track_line.hpp>
@@ -11,6 +12,8 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  Track_Line::run();
+  // Track_Line::run();
+  //debug::motor_test();
+  
 }
 
