@@ -1,5 +1,3 @@
-#include <Arduino.h>
-
 #include <common.hpp>
 #include <hardware_interface.hpp>
 

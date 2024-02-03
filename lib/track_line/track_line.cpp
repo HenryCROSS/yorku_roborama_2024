@@ -1,5 +1,3 @@
-#include <Arduino.h>
-
 #include <hardware_interface.hpp>
 #include <track_line.hpp>
 #include <common.hpp>
