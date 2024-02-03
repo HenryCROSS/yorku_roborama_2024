@@ -21,8 +21,8 @@ public:
 
     CS int SPEED = 100; // car speed
     
-    static bool left_on_line = true;
-    static bool right_on_line = true;
+    static bool left_on_line;
+    static bool right_on_line;
 
     static void init()
     {
@@ -30,5 +30,8 @@ public:
 
 #undef CS
 };
+
+bool G::left_on_line = true;
+bool G::right_on_line = true;
 
 #endif // !_CONFIGS_HPP_
