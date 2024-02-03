@@ -17,7 +17,7 @@ void Track_Line::run()
         HW_API::turn_right();
         Serial.println("right_out");
     } else if (!G::left_on_line && !G::right_on_line){
-        while (!G::left_on_line && !G::right_on_line)
+        while (!G::left_on_line || !G::right_on_line)
         {
             HW_API::read_data();   
             HW_API::backward();
