@@ -1,4 +1,8 @@
-#include <common.hpp>
+#include <Arduino.h>
+
+#include <configs.hpp>
+#include <debug.hpp>
+#include <hardware_interface.hpp>
 
 void debug::motor_test(){
     HW_API::forward();

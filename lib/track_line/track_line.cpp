@@ -1,4 +1,8 @@
-#include <common.hpp>
+#include <Arduino.h>
+
+#include <hardware_interface.hpp>
+#include <track_line.hpp>
+#include <configs.hpp>
 
 
 void Track_Line::run()

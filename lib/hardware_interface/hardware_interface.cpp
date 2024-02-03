@@ -1,4 +1,7 @@
-#include <common.hpp>
+#include <Arduino.h>
+
+#include <configs.hpp>
+#include <hardware_interface.hpp>
 
 
 void wheel_forward(uint8_t forward_pin, uint8_t backward_pin)
@@ -26,15 +29,15 @@ void wheel_move_speed(uint8_t pin, int speed)
 
 void car_go_forward(int speed)
 {
-    wheel_move_speed(G::LEFT_MOTOR, speed-G::DELTA);
-    wheel_move_speed(G::RIGHT_MOTOR, speed+G::DELTA);
+    wheel_move_speed(G::LEFT_MOTOR, speed-G::DELTA<G::DELTA_VERSION>);
+    wheel_move_speed(G::RIGHT_MOTOR, speed+G::DELTA<G::DELTA_VERSION>);
     wheel_forward(G::LEFT_WHEEL_FORWARD, G::LEFT_WHEEL_BACKWARD);
     wheel_forward(G::RIGHT_WHEEL_FORWARD, G::RIGHT_WHEEL_BACKWARD);
 }
 
 void car_go_forward_by_speed(int left_wheel_speed, int right_wheel_speed)
 {
-    wheel_move_speed(G::LEFT_MOTOR, left_wheel_speed - G::DELTA);
+    wheel_move_speed(G::LEFT_MOTOR, left_wheel_speed - G::DELTA<G::DELTA_VERSION>);
     wheel_move_speed(G::RIGHT_MOTOR, right_wheel_speed);
     wheel_forward(G::LEFT_WHEEL_FORWARD, G::LEFT_WHEEL_BACKWARD);
     wheel_forward(G::RIGHT_WHEEL_FORWARD, G::RIGHT_WHEEL_BACKWARD);
@@ -42,8 +45,8 @@ void car_go_forward_by_speed(int left_wheel_speed, int right_wheel_speed)
 
 void car_go_backward(int speed)
 {
-    wheel_move_speed(G::LEFT_MOTOR, speed-G::DELTA);
-    wheel_move_speed(G::RIGHT_MOTOR, speed+G::DELTA);
+    wheel_move_speed(G::LEFT_MOTOR, speed-G::DELTA<G::DELTA_VERSION>);
+    wheel_move_speed(G::RIGHT_MOTOR, speed+G::DELTA<G::DELTA_VERSION>);
     wheel_backward(G::LEFT_WHEEL_FORWARD, G::LEFT_WHEEL_BACKWARD);
     wheel_backward(G::RIGHT_WHEEL_FORWARD, G::RIGHT_WHEEL_BACKWARD);
 }
