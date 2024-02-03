@@ -14,8 +14,8 @@ public:
     CS int RIGHT_WHEEL_BACKWARD = A3; // Motor B In2 pin
     CS int LEFT_WHEEL_FORWARD = A1;    // Motor A In1 pin
     CS int LEFT_WHEEL_BACKWARD = A2;   // Motor A In2 pin
-    CS int SENSOR_L = A2;        // qtr sensor
-    CS int SENSOR_R = A1;        // qtr sensor
+    CS int SENSOR_L = 6;        // qtr sensor
+    CS int SENSOR_R = 7;        // qtr sensor
 
     CS int DELTA = 0; // left speed will minus this value
 
@@ -26,6 +26,15 @@ public:
 
     static void init()
     {
+        pinMode(LEFT_MOTOR,OUTPUT);
+        pinMode(RIGHT_MOTOR,OUTPUT);
+        pinMode(RIGHT_WHEEL_FORWARD,OUTPUT);
+        pinMode(RIGHT_WHEEL_BACKWARD,OUTPUT);
+        pinMode(LEFT_WHEEL_FORWARD,OUTPUT);
+        pinMode(RIGHT_WHEEL_BACKWARD,OUTPUT);
+        pinMode(SENSOR_L,INPUT);
+        pinMode(SENSOR_R,INPUT);
+        Serial.begin(9600);
     }
 
 #undef CS
