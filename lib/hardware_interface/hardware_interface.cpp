@@ -89,7 +89,7 @@ void HW_API::forward()
 
 void HW_API::backward()
 {
-    car_go_backward(G::SPEED);
+    car_go_backward(G::TURN_SPEED);
 }
 
 void HW_API::emerg_stop()
