@@ -17,7 +17,9 @@ public:
     CS int SENSOR_L = 4;        // qtr sensor
     CS int SENSOR_R = 5;        // qtr sensor
 
-    CS int DELTA = 0; // left speed will minus this value
+    CS int DELTA_VERSION = 1;
+    template <int VERSION>
+    static int DELTA; // left speed will minus this value
 
     CS int SPEED = 255; // car speed
     
