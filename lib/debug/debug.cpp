@@ -21,3 +21,8 @@ void debug::motor_test(){
 void debug::sensor_test(){
 
 }
+
+void debug::correct_direction_test(){
+    HW_API::forward();
+    delay(500);
+}

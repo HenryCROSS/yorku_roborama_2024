@@ -6,6 +6,8 @@ class debug
 public:
     static void motor_test();
     static void sensor_test();
+
+    static void correct_direction_test();
 };
 
 
