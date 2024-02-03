@@ -27,15 +27,15 @@ void wheel_move_speed(uint8_t pin, int speed)
 
 void car_go_forward(int speed)
 {
-    wheel_move_speed(G::LEFT_MOTOR, speed-G::DELTA<G::DELTA_VERSION>);
-    wheel_move_speed(G::RIGHT_MOTOR, speed+G::DELTA<G::DELTA_VERSION>);
+    wheel_move_speed(G::LEFT_MOTOR, speed-G::DELTA<G::VERSION>);
+    wheel_move_speed(G::RIGHT_MOTOR, speed+G::DELTA<G::VERSION>);
     wheel_forward(G::LEFT_WHEEL_FORWARD, G::LEFT_WHEEL_BACKWARD);
     wheel_forward(G::RIGHT_WHEEL_FORWARD, G::RIGHT_WHEEL_BACKWARD);
 }
 
 void car_go_forward_by_speed(int left_wheel_speed, int right_wheel_speed)
 {
-    wheel_move_speed(G::LEFT_MOTOR, left_wheel_speed - G::DELTA<G::DELTA_VERSION>);
+    wheel_move_speed(G::LEFT_MOTOR, left_wheel_speed - G::DELTA<G::VERSION>);
     wheel_move_speed(G::RIGHT_MOTOR, right_wheel_speed);
     wheel_forward(G::LEFT_WHEEL_FORWARD, G::LEFT_WHEEL_BACKWARD);
     wheel_forward(G::RIGHT_WHEEL_FORWARD, G::RIGHT_WHEEL_BACKWARD);
@@ -43,8 +43,8 @@ void car_go_forward_by_speed(int left_wheel_speed, int right_wheel_speed)
 
 void car_go_backward(int speed)
 {
-    wheel_move_speed(G::LEFT_MOTOR, speed-G::DELTA<G::DELTA_VERSION>);
-    wheel_move_speed(G::RIGHT_MOTOR, speed+G::DELTA<G::DELTA_VERSION>);
+    wheel_move_speed(G::LEFT_MOTOR, speed-G::DELTA<G::VERSION>);
+    wheel_move_speed(G::RIGHT_MOTOR, speed+G::DELTA<G::VERSION>);
     wheel_backward(G::LEFT_WHEEL_FORWARD, G::LEFT_WHEEL_BACKWARD);
     wheel_backward(G::RIGHT_WHEEL_FORWARD, G::RIGHT_WHEEL_BACKWARD);
 }
@@ -74,22 +74,22 @@ void car_turn_left_by_speed(int left_wheel_backward_speed, int right_wheel_forwa
 }
 
 void HW_API::turn_left(){
-    car_turn_left_by_speed(G::TURN_SPEED, G::TURN_SPEED);
+    car_turn_left_by_speed(G::TURN_SPEED<G::VERSION>, G::TURN_SPEED<G::VERSION>);
 }
 
 void HW_API::turn_right(){
-    car_turn_right_by_speed(G::TURN_SPEED, G::TURN_SPEED);
+    car_turn_right_by_speed(G::TURN_SPEED<G::VERSION>, G::TURN_SPEED<G::VERSION>);
 }
 
 
 void HW_API::forward()
 {
-    car_go_forward(G::SPEED);
+    car_go_forward(G::SPEED<G::VERSION>);
 }
 
 void HW_API::backward()
 {
-    car_go_backward(G::TURN_SPEED);
+    car_go_backward(G::TURN_SPEED<G::VERSION>);
 }
 
 void HW_API::emerg_stop()
