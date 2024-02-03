@@ -1,7 +1,5 @@
-#include <Arduino.h>
+#include <common.hpp>
 
-#include <configs.hpp>
-#include <hardware_interface.hpp>
 
 void wheel_forward(uint8_t forward_pin, uint8_t backward_pin)
 {

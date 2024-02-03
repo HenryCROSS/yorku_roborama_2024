@@ -1,8 +1,5 @@
-#include <Arduino.h>
+#include <common.hpp>
 
-#include <configs.hpp>
-#include <debug.hpp>
-#include <hardware_interface.hpp>
 void debug::motor_test(){
     HW_API::forward();
     delay(1000);
@@ -19,7 +16,14 @@ void debug::motor_test(){
 }
 
 void debug::sensor_test(){
-
+    G::left_on_line = digitalRead(G::SENSOR_L);
+    G::right_on_line = digitalRead(G::SENSOR_R);
+    Serial.print("left_on_line: ");
+    Serial.print(G::left_on_line);
+    Serial.print("------");
+    Serial.print("right_on_line: ");
+    Serial.print(G::right_on_line);
+    delay(500);
 }
 
 void debug::correct_direction_test(){
