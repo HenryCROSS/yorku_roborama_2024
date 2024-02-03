@@ -3,6 +3,8 @@
 
 #include <Arduino.h>
 
+#include <types.hpp>
+
 class G
 {
 #define CS const static
@@ -17,8 +19,8 @@ public:
     CS int SENSOR_L = 4;        // qtr sensor
     CS int SENSOR_R = 5;        // qtr sensor
 
-    CS int DELTA_VERSION = 1;
-    template <int VERSION>
+    CS auto DELTA_VERSION = Veh_Version::MK_1;
+    template <Veh_Version VERSION>
     static int DELTA; // left speed will minus this value
 
     CS int SPEED = 255; // car speed
