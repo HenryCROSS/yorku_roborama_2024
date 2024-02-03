@@ -40,7 +40,5 @@ public:
 #undef CS
 };
 
-bool G::left_on_line = true;
-bool G::right_on_line = true;
 
 #endif // !_CONFIGS_HPP_
