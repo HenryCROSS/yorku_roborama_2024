@@ -10,18 +10,14 @@ void Track_Line::run()
 
     if(G::left_on_line && G::right_on_line){
         HW_API::forward();
-        delay(10);
     } else if (!G::left_on_line && G::right_on_line){
         HW_API::turn_right();
-        delay(10);
     } else if (G::left_on_line && !G::right_on_line){
         HW_API::turn_left();
-        delay(10);
     } else if (!G::left_on_line && !G::right_on_line){
         HW_API::backward();
-        delay(10);
     } else {
         
     }
-    
+    delayMicroseconds(1);
 }
