@@ -5,8 +5,8 @@ class debug
 {
 public:
     static void motor_test();
+    static void sensor_test();
 };
-
 
 
 

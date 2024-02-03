@@ -1,3 +1,6 @@
+#include <Arduino.h>
+
+#include <configs.hpp>
 #include <debug.hpp>
 #include <hardware_interface.hpp>
 void debug::motor_test(){
@@ -15,4 +18,6 @@ void debug::motor_test(){
     delay(999999);
 }
 
-void debug::sensor_test
+void debug::sensor_test(){
+
+}
