@@ -11,12 +11,28 @@ void Track_Line::run()
         HW_API::forward();
         Serial.println("on_line");
     } else if (!G::left_on_line && G::right_on_line){
-        Serial.println("left_out");
-        HW_API::turn_left();
+        
+        HW_API::emerg_stop();
+        delay(500);
+        while (!G::left_on_line || G::right_on_line)
+        {
+            HW_API::read_data();   
+            HW_API::turn_left();
+            Serial.println("Left_out");
+        }
     } else if (G::left_on_line && !G::right_on_line){
-        HW_API::turn_right();
+        HW_API::emerg_stop();
+        delay(500);
+        while (G::left_on_line || !G::right_on_line)
+        {
+            HW_API::read_data();   
+            HW_API::turn_right();
+            Serial.println("Rithg_ot");
+        }
         Serial.println("right_out");
     } else if (!G::left_on_line && !G::right_on_line){
+        HW_API::emerg_stop();
+        delay(500);
         while (!G::left_on_line || !G::right_on_line)
         {
             HW_API::read_data();   
@@ -26,8 +42,6 @@ void Track_Line::run()
     } else {
         
     }
-    // delayMicroseconds(1);
-    delay(100);
-    HW_API::emerg_stop();
-    delay(100);
+    delayMicroseconds(10);
+    
 }

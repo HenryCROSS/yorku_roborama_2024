@@ -6,7 +6,7 @@ bool G::right_on_line = true;
 template<>
 int G::DELTA<Veh_Version::MK_1> = 10;
 template<>
-int G::SPEED<Veh_Version::MK_1> = 120;
+int G::SPEED<Veh_Version::MK_1> = 100;
 template<>
 int G::TURN_SPEED<Veh_Version::MK_1> = 75;
 
