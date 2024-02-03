@@ -21,6 +21,10 @@ void debug::motor_test(){
 void debug::sensor_test(){
     G::left_on_line = digitalRead(G::SENSOR_L);
     G::right_on_line = digitalRead(G::SENSOR_R);
-    Serial.println(data==1);
+    Serial.print("left_on_line: ");
+    Serial.print(G::left_on_line);
+    Serial.print("------");
+    Serial.print("right_on_line: ");
+    Serial.print(G::right_on_line);
     delay(500);
 }
