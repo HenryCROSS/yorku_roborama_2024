@@ -29,5 +29,7 @@ void debug::sensor_test(){
 
 void debug::correct_direction_test(){
     HW_API::forward();
-    delay(500);
+    delay(1000);
+    HW_API::emerg_stop();
+    delay(9999999);
 }
