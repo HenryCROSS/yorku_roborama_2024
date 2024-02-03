@@ -21,6 +21,8 @@ public:
 
     CS int SPEED = 100; // car speed
     
+    static bool left_on_line = true;
+    static bool right_on_line = true;
 
     static void init()
     {
