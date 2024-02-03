@@ -101,4 +101,5 @@ void HW_API::read_data()
 {
     G::left_on_line = digitalRead(G::SENSOR_L);
     G::right_on_line = digitalRead(G::SENSOR_R);
+    // delay(100);
 }
