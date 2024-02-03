@@ -1,6 +1,6 @@
 #include <Arduino.h>
 
-#include <configs.hpp>
+#include <common.hpp>
 #include <hardware_interface.hpp>
 
 

@@ -1,7 +1,6 @@
 #include <Arduino.h>
 
-#include <configs.hpp>
-#include <types.hpp>
+#include <common.hpp>
 #include <hardware_interface.hpp>
 #include <track_line.hpp>
 #include <debug.hpp>
