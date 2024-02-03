@@ -36,7 +36,7 @@ void car_go_forward(int speed)
 
 void car_go_forward_by_speed(int left_wheel_speed, int right_wheel_speed)
 {
-    wheel_move_speed(G::LEFT_MOTOR, left_wheel_speed);
+    wheel_move_speed(G::LEFT_MOTOR, left_wheel_speed - G::DELTA);
     wheel_move_speed(G::RIGHT_MOTOR, right_wheel_speed);
     wheel_forward(G::LEFT_WHEEL_FORWARD, G::LEFT_WHEEL_BACKWARD);
     wheel_forward(G::RIGHT_WHEEL_FORWARD, G::RIGHT_WHEEL_BACKWARD);
@@ -85,15 +85,16 @@ void HW_API::turn_right(){
 
 void HW_API::forward()
 {
-
+    car_go_forward(G::SPEED);
 }
 
 void HW_API::backward()
 {
-    
+    car_go_backward(G::SPEED);
 }
 
 void HW_API::read_data()
 {
-    
+    G::left_on_line = digitalRead(G::SENSOR_L);
+    G::right_on_line = digitalRead(G::SENSOR_R);
 }
