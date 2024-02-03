@@ -19,7 +19,7 @@ public:
     CS int SENSOR_L = 4;        // qtr sensor
     CS int SENSOR_R = 5;        // qtr sensor
 
-    CS auto VERSION = Veh_Version::MK_1;
+    CS auto VERSION = Veh_Version::MK_2;
     template <Veh_Version VERSION>
     static int DELTA; // left speed will minus this value
 
